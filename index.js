@@ -18,7 +18,7 @@ function getDogImage(type) {
 }
 
 function displayAllThePuppies (responseJson) {
-    $('.results').append('<img class="results-img" alt="placeholder">');
+    $('.results').html('<img class="results-img" alt="placeholder">');
 
     $('.results-img').attr('src', responseJson.message);
 
@@ -28,7 +28,7 @@ function displayAllThePuppies (responseJson) {
 }
 
 function breedDoesNotExist (error) {
-    $('.results').append(`<h2>${error.message}</h2>`);
+    $('.results').html(`<h2>${error.message}</h2>`);
     $('.results').removeClass('hidden');
 }
 
